@@ -1,0 +1,17 @@
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $variabile = $_POST["variabile"];
+        $intero = (int)$variabile;
+        $float = (float)$variabile;
+        $boolean = filter_var($variabile);
+        $string = (string)$variabile;
+
+        echo "Trasformata in integer vale -->$intero
+        <br>
+        Trasformata in float vale -->$float
+        <br>
+        Trasformata in boolean vale -->",$boolean ? "1" : "0","
+        <br>
+        Trasformata in string vale -->$string";
+    }
+?>
