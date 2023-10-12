@@ -8,9 +8,9 @@
     function mcd($numUno, $numDue) {
         while($numDue != 0)
         {
-            $i = $numDue;
-            $numDue = $numUno % $numDue;
-            $numUno = $i;
+            $resto = $numUno % $numDue;
+            $numUno = $numDue;
+            $numDue = $resto;
         }
         return $numUno;
     }
